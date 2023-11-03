@@ -1,12 +1,13 @@
 package com.mvaldiviezoutp.automaticbrightness
 
+import android.app.Service
+import android.content.ContentResolver
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
+import android.os.IBinder
 import android.provider.Settings
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,9 +28,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setBrightnessToMax() {
         val layoutParams = window.attributes
-        layoutParams.screenBrightness = 1.0f // Maximum brightness
+        layoutParams.screenBrightness = 1.0f
         window.attributes = layoutParams
     }
 }
+
+
 
 
